@@ -2,10 +2,9 @@
 Organizador de tareas desarrollado con React, Tailwind CSS
 
 
-
+### Dev mode
+instala los node_modules
 ~~~
-## Dev mode
-bloque
-
+npm install
 ~~~
 
