@@ -16,7 +16,7 @@ function HomePage() {
 
       <Link
         className="bg-zinc-500 text-white px-4 py-2 rounded-md mt-4 inline-block"
-        to="/register"
+        to="/login"
       >
         Get Started
       </Link>

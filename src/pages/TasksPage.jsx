@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useTasks } from "../context/tasksContext";
 import { TaskCard } from "../components/tasks/TaskCard";
 import { ImFileEmpty } from "react-icons/im";
+import { Navbar } from "../components/Navbar";
 
 export function TasksPage() {
   const { tasks, getTasks } = useTasks();
@@ -12,6 +13,7 @@ export function TasksPage() {
 
   return (
     <>
+    <Navbar />
       {tasks.length === 0 && (
         <div className="flex justify-center items-center p-10">
           <div>

@@ -53,11 +53,11 @@ export function LoginPage() {
           />
           <p>{errors.password?.message}</p>
 
-          <Button>Login</Button>
+          <Button classname={"my-4 bg-blue-700 p-2 rounded w-full"} >Login</Button>
         </form>
 
         <p className="flex gap-x-2 justify-between">
-          Don't have an account? <Link to="/register" className="text-sky-500">Sign up</Link>
+          Don't have an account? <Link to="/register" className="text-sky-500">Sign up</Link><Link to="/" className="text-sky-500">Home</Link>
         </p>
       </Card>
     </div>
