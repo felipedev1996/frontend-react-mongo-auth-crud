@@ -9,32 +9,47 @@ export function Navbar() {
   return (
     <nav className="bg-zinc-700 my-3 flex justify-between py-5 px-10 rounded-lg ">
       <h1 className="text-2xl font-bold">
-        <Link to={isAuthenticated ? "/tasks" : "/"}>Task Manager</Link>
+        <Link to={isAuthenticated ? "/tasks" : "/"}>Time Manager</Link>
       </h1>
       <ul className="flex gap-x-2">
         {isAuthenticated ? (
           <>
+            <li>Welcome {user.username}</li>
+            {/* <li>
+              <Button to="/add-task">Add Task</Button>
+            </li> */}
             <li>
-              Welcome {user.username}
-            </li>
-            <li>
-              <ButtonLink to="/add-task">Add Task</ButtonLink>
-            </li>
-            <li>
-              <ButtonLink>
-              <Link to="/" onClick={() => logout()}>
-                Logout
-              </Link>
-              </ButtonLink>
+              <Button>
+                <Link to="/" onClick={() => logout()}>
+                  Logout
+                </Link>
+              </Button>
             </li>
           </>
         ) : (
           <>
             <li>
-              <ButtonLink to="/login" classname={"inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"}>Login</ButtonLink>
+              <Link
+                to="/login"
+                className={
+                  "text-blue-500 hover:text-blue-600 font-bold py-2 px-4 rounded"
+                }
+              
+                 
+                
+              >
+                Log in
+              </Link>
             </li>
             <li>
-              <ButtonLink to="/register" classname={"inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"} >Register</ButtonLink>
+              <Link
+                to="/register"
+                className={
+                  "text-blue-500 hover:text-blue-600 font-bold py-2 px-4 rounded"
+                }
+              >
+                Register
+              </Link>
             </li>
           </>
         )}
