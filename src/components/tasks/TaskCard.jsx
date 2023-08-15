@@ -1,9 +1,7 @@
 import { useTasks } from "../../context/tasksContext";
-import { Button } from "../ui/Button";
 
 
-//     import Button from 'react-bootstrap/Button';
-// import Card from 'react-bootstrap/Card';
+
 import { ButtonLink } from "../ui/ButtonLink";
 
 
@@ -12,7 +10,7 @@ export function TaskCard({ task }) {
 
  
 
-  {/* <div class=" px-4 py-4 sm:w-1/2 bg-gray-200 border border-gray-200 rounded-lg shadow "> */}
+
 
   return (
     
@@ -38,4 +36,5 @@ export function TaskCard({ task }) {
    
    );
   }
+   
    
