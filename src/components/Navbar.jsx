@@ -18,10 +18,14 @@ export function Navbar() {
               Welcome {user.username}
             </li>
             <li>
-              <ButtonLink to="/add-task">Add Task</ButtonLink>
+              <Link 
+               className=" text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded"
+              to="/add-task">Add Task</Link>
             </li>
             <li>
-              <Link to="/" onClick={() => logout()}>
+              <Link 
+               className=" text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded"
+              to="/" onClick={() => logout()}>
                 Logout
               </Link>
             </li>

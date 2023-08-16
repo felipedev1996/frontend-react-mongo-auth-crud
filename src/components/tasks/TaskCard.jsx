@@ -26,7 +26,7 @@ export function TaskCard({ task }) {
           <div className="w-1/2">
             <Link
               to={`/tasks/`}
-             
+              className=" text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded"
               onClick={() => deleteTask(task._id)}
             >
               Delete
@@ -35,9 +35,7 @@ export function TaskCard({ task }) {
           <div className="w-50%">
             <Link
               to={`/tasks/${task._id}`}
-              className=
-                " text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded"
-              
+              className=" text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded"
             >
               Edit
             </Link>
