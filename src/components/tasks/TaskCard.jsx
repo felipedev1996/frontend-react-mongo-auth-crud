@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTasks } from "../../context/tasksContext";
 import { Button, ButtonLink, Card } from "../ui";
 
@@ -23,25 +24,23 @@ export function TaskCard({ task }) {
         </span>
         <div class="flex  mt-4 gap-4">
           <div className="w-1/2">
-            <ButtonLink
+            <Link
               to={`/tasks/`}
-              classname={
-                " text-blue-500 hover:text-blue-700  font-bold py-2 px-4 rounded"
-              }
+             
               onClick={() => deleteTask(task._id)}
             >
               Delete
-            </ButtonLink>
+            </Link>
           </div>
           <div className="w-50%">
-            <ButtonLink
+            <Link
               to={`/tasks/${task._id}`}
-              classname={
+              className=
                 " text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded"
-              }
+              
             >
               Edit
-            </ButtonLink>
+            </Link>
           </div>
         </div>
       </div>
