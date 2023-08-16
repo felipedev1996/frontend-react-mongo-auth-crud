@@ -5,7 +5,7 @@ export function TaskCard({ task }) {
   const { deleteTask } = useTasks();
 
   return (
-    <Card>
+   
       <div>
         <div class="flex flex-col items-center border min-w-1/4 border-gray-200 rounded-lg p-2 ">
           <img
@@ -45,7 +45,7 @@ export function TaskCard({ task }) {
           </div>
         </div>
       </div>
-    </Card>
+    
   );
 }
 // <header className="flex justify-between">
