@@ -22,6 +22,7 @@ export function LoginPage() {
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/tasks");
+      console.log(isAuthenticated);
     }
   }, [isAuthenticated]);
 
@@ -53,7 +54,7 @@ export function LoginPage() {
           />
           <p>{errors.password?.message}</p>
 
-          <Button classname={"my-4 bg-blue-700 p-2 rounded w-full"} >Login</Button>
+          <button classname={"my-4 bg-blue-700 p-2 rounded w-full"} >Login</button>
         </form>
 
         <p className="flex gap-x-2 justify-between">
