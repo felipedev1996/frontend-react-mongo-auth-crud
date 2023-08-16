@@ -37,7 +37,7 @@ export function TaskCard({ task }) {
             <div className="w-50%">
               <ButtonLink
                 to={`/tasks/${task._id}`}
-                classname=" text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded"
+                classname={" text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded"}
               >
                 Edit
               </ButtonLink>
