@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useAuth } from "../context/authContext";
 import { Link, useNavigate } from "react-router-dom";
-import { Card, Message, Button, Input, Label } from "../components/ui";
+import { Card, Message, Input, Label } from "../components/ui";
 import { useForm } from "react-hook-form";
 import { registerSchema } from "../schemas/auth";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -76,11 +76,11 @@ function Register() {
           {errors.confirmPassword?.message && (
             <p className="text-red-500">{errors.confirmPassword?.message}</p>
           )}
-          <Button>Submit</Button>
+          <button className="my-4 bg-blue-700 p-2 rounded w-full">Submit</button>
         </form>
         <p>
           Already Have an Account?
-          <Link className="text-sky-500" to="/login">
+          <Link className="text-sky-500 ml-10 hover:text-sky-300" to="/login">
             Login
           </Link>
         </p>

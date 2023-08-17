@@ -13,7 +13,7 @@ export function TasksPage() {
 
   return (
     <>
-    <Navbar />
+  
       {tasks.length === 0 && (
         <div className="flex justify-center items-center p-10">
           <div>

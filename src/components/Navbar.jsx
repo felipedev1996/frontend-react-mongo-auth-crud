@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/authContext";
-import { Button } from "./ui/Button";
+
 
 export function Navbar() {
   const { isAuthenticated, logout, user } = useAuth();
@@ -15,15 +15,15 @@ export function Navbar() {
         {isAuthenticated ? (
           <>
             <li>Welcome {user.username}</li>
-            {/* <li>
-              <Button to="/add-task">Add Task</Button>
-            </li> */}
             <li>
-              <Button>
+              <Link to="/add-task">Add Task</Link>
+            </li>
+            <li>
+             
                 <Link to="/" onClick={() => logout()}>
                   Logout
                 </Link>
-              </Button>
+              
             </li>
           </>
         ) : (
@@ -32,7 +32,7 @@ export function Navbar() {
               <Link
                 to="/login"
                 className={
-                  "text-blue-500 hover:text-blue-600 font-bold py-2 px-4 rounded"
+                  "text-blue-500 hover:text-blue-400 font-bold py-2 px-4 rounded"
                 }
               
                  
@@ -45,7 +45,7 @@ export function Navbar() {
               <Link
                 to="/register"
                 className={
-                  "text-blue-500 hover:text-blue-600 font-bold py-2 px-4 rounded"
+                  "text-blue-500 hover:text-blue-400 font-bold py-2 px-4 rounded"
                 }
               >
                 Register

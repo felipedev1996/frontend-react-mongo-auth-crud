@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
-import { Button, Card, Input, Label } from "../components/ui";
+import {  Card, Input, Label } from "../components/ui";
 import { useTasks } from "../context/tasksContext";
 import { Textarea } from "../components/ui/Textarea";
 import { useForm } from "react-hook-form";
@@ -57,33 +57,35 @@ export function TaskFormPage() {
   }, []);
 
   return (
-    <Card>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <Label htmlFor="title">Title</Label>
-        <Input
-          type="text"
-          name="title"
-          placeholder="Title"
-          {...register("title")}
-          autoFocus
-        />
-        {errors.title && (
-          <p className="text-red-500 text-xs italic">Please enter a title.</p>
-        )}
-
-        <Label htmlFor="description">Description</Label>
-        <Textarea
-          name="description"
-          id="description"
-          rows="3"
-          placeholder="Description"
-          {...register("description")}
-        ></Textarea>
-
-        <Label htmlFor="date">Date</Label>
-        <Input type="date" name="date" {...register("date")} />
-        <Button>Save</Button>
-      </form>
-    </Card>
+    <div className="flex h-[calc(100vh-100px)] justify-center items-center">
+      
+      <Card>
+        <p className="text-2xl font-bold">{params.id ? "Edit" : "Create"} Task </p>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Label htmlFor="title">Title</Label>
+          <Input
+            type="text"
+            name="title"
+            placeholder="Title"
+            {...register("title")}
+            autoFocus
+          />
+          {errors.title && (
+            <p className="text-red-500 text-xs italic">Please enter a title.</p>
+          )}
+          <Label htmlFor="description">Description</Label>
+          <Textarea
+            name="description"
+            id="description"
+            rows="3"
+            placeholder="Description"
+            {...register("description")}
+          ></Textarea>
+          <Label htmlFor="date">Date</Label>
+          <Input type="date" name="date" {...register("date")} />
+          <Button>Save</Button>
+        </form>
+      </Card>
+    </div>
   );
 }
