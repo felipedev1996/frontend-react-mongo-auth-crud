@@ -19,7 +19,7 @@ export function Navbar() {
             </li>
             <li>
               <Link 
-               className=" text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded"
+               className=" text-blue-500 hover:text-blue-700 font-bold py-2 px-4 rounded "
               to="/add-task">Add Task</Link>
             </li>
             <li>
