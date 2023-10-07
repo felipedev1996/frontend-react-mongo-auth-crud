@@ -38,7 +38,7 @@ export function LoginPage() {
       <div href="#" class="group block max-w-xs mx-auto mt-5 rounded-lg p-6 bg-zinc-700  ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-zinc-600 hover:ring-sky-400">
       <div class="flex flex- space-x-3">
        
-        <h2  class="text-white  text-xl font-semibold">Template user for login</h2>
+        <h2  class="text-purple-400   text-xl font-semibold">Template user for login</h2>
       </div>
       <p class="text-white-500 group-hover:text-white text-ms">Email:  visitapp@user.tld</p>
       <p class="text-white-500 group-hover:text-white text-ms">Password: visitapp </p>
